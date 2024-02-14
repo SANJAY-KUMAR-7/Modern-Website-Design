@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import Image from 'next/image'
 import mic from "./images/image-removebg-preview.png"
-import NavBar from './components/NavBar'
 import { BadgeDollarSign, Lightbulb, FolderKanban } from 'lucide-react';
 import review1 from "./images/review1.jpg"
 import review2 from "./images/review2.png"
@@ -13,35 +12,34 @@ import logo3 from "./images/3.png"
 import logo4 from "./images/4.png"
 import logo5 from "./images/5.png"
 import logo6 from "./images/6.png"
-import Footer from './components/Footer';
+
 export default function Home() {
   return (
     <>
-      <NavBar />
       {/*HERO SECTION*/}
-      <div className=" text-white flex justify-between " >
-        <div className='flex flex-col w-8/12 justify-center gap-6'>
-          <p className='text-6xl'> Helping Reach the right audience,faster </p>
-          <p className='text-xl w-2/3'>Helping the world's best podcasts & organizations
+      <div className=" text-white flex flex-col md:flex-row justify-between " >
+        <div className='flex flex-col md:w-8/12 justify-center gap-6  text-center md:text-left'>
+          <p className='text-3xl md:text-6xl '> Helping Reach the right audience,faster </p>
+          <p className='text-lg md:text-xl mx-4 md:mx-0 md:w-2/3'>Helping the world's best podcasts & organizations
             reach their ideal listeners.</p>
 
-          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 w-32">
+          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 md:w-32 mx-10 md:mx-0">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              Contact Us
+              Reach Out
             </span>
           </button>
         </div>
-        <div className=''>
+        <div className='hidden md:inline-flex'>
           <Image src={mic} alt='MIC' width={400} />
         </div>
       </div>
       {/*CARDS*/}
       <div className='flex justify-center items-center flex-col my-12'>
-        <h1 className='text-7xl text-white'>How We Can Help</h1>
+        <h1 className='text-4xl md:text-7xl text-white'>How We Can Help</h1>
 
-        <div className='text-white flex items-center justify-center my-12 gap-10'>
-          <Card className="py-4 w-1/3 shadow-sm shadow-cyan-500/30">
+        <div className='text-white flex flex-col md:flex-row items-center justify-center my-12 gap-10'>
+          <Card className="py-4 w-2/3 md:w-1/3 shadow-sm shadow-cyan-500/30">
             <CardBody className="overflow-visible py-2">
               <BadgeDollarSign size={45} className='hover:text-green-600' />
             </CardBody>
@@ -51,7 +49,7 @@ export default function Home() {
             </CardHeader>
           </Card>
 
-          <Card className="py-4 w-1/3 shadow-sm shadow-cyan-500/30">
+          <Card className="py-4 w-2/3 md:w-1/3 shadow-sm shadow-cyan-500/30">
             <CardBody className="overflow-visible py-2">
               <FolderKanban size={45} className='hover:text-cyan-600' />
             </CardBody>
@@ -61,7 +59,7 @@ export default function Home() {
             </CardHeader>
           </Card>
 
-          <Card className="py-4 w-1/3 shadow-sm shadow-cyan-500/30">
+          <Card className="py-4 w-2/3 md:w-1/3 shadow-sm shadow-cyan-500/30">
             <CardBody className="overflow-visible py-2">
               <Lightbulb size={45} className=' hover:text-yellow-400' />
             </CardBody>
@@ -73,9 +71,9 @@ export default function Home() {
         </div>
       </div>
       {/*Collabs */}
-      <div className='flex flex-col text-white text-center justify-center my-16 overflow-hidden'>
+      <div className='flex flex-col text-white text-center justify-center my-16 overflow-hidden mx-4 md:mx-0'>
         <h1 className=' font-extrabold text-4xl'>OUR COLLABORATIONS</h1>
-        <div className='flex gap-10'>
+        <div className='grid grid-cols-2 mx-4 md:mx-0  md:flex gap-10'>
           <Image src={logo1} alt='...' width={200} className='transition hover:translate-x-4 ' />
           <Image src={logo2} alt='...' width={200} />
           <Image src={logo3} alt='...' width={200} />
@@ -89,9 +87,9 @@ export default function Home() {
 
 
       {/*CAROUSEL*/}
-      <div className='flex flex-col my-12 text-white text-center justify-center'>
+      <div className='flex flex-col my-12 text-white text-center justify-center mx-4 md:mx-0'>
         <h1 className=' text-4xl font-bold'>OUR HAPPY CUSTOMERS</h1>
-        <div className='flex text-white gap-12 my-20' data-carousel="slide">
+        <div className='flex flex-col md:flex-row text-white gap-12 my-20' data-carousel="slide">
           <Testimonial
             image={review1}
             name="Brad Barrett"
@@ -105,7 +103,7 @@ export default function Home() {
 
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

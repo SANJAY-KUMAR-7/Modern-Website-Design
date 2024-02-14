@@ -1,5 +1,6 @@
 import React from 'react'
-import { Instagram, Mail,Twitter } from 'lucide-react';
+import { Instagram, Mail,Twitter,Linkedin } from 'lucide-react';
+
 import logo from '../images/image05.png'
 import Image from 'next/image'
 
@@ -14,13 +15,16 @@ function Footer() {
                         </a>
                         <ul className="flex items-center mb-6 text-sm font-medium gap-6">
                             <li>
-                                <Instagram/>
+                                <button><Instagram className='hover:text-red-500'/></button>
                             </li>
                             <li>
-                                <Twitter/>
+                                <button><Twitter className=' hover:text-cyan-500'/></button>
                             </li>
                             <li>
-                               <Mail/>
+                               <button><Linkedin className=' hover:text-blue-500'/></button>
+                            </li>
+                            <li>
+                               <button><Mail className=' hover:text-yellow-500'/></button>
                             </li>
                         </ul>
                     </div>
