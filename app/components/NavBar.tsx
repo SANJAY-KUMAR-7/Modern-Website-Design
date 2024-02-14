@@ -1,21 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import logo from '../images/image05.png'
 import Link from 'next/link'
 import { Menu } from 'lucide-react';
 
 function NavBar() {
-  const [burger,setBurger]=useState(0)
 
-const burgermenu=(()=>{
-  setBurger(1);
-  return <div>
-      
-  </div>
-
-
-
-})
 
   return (
     <>
@@ -30,7 +20,7 @@ const burgermenu=(()=>{
             </div>
             <div className='flex md:hidden'>
               <button>
-                <Menu onClick={burgermenu}/>
+                <Menu />
                 </button>
             </div>
         </div>
