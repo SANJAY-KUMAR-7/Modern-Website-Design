@@ -1,16 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../images/image05.png'
+import logo from '@/public/images/image05.png'
 import Link from 'next/link'
-import { Menu } from 'lucide-react';
 
 function NavBar() {
 
-
   return (
     <>
-        
-
 <nav className="text-white">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -26,14 +22,14 @@ function NavBar() {
     <div className="hidden w-full md:block md:w-auto bg-transparent text-white" id="navbar-default">
       <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8  md:mt-0 md:border-0  ">
         <li>
-          <a href="#" className=" py-2 px-3 text-white  rounded   hover:text-cyan-500" aria-current="page">Home</a>
+          <Link href="/" className=" py-2 px-3 text-white  rounded   hover:text-cyan-500" aria-current="page">Home</Link>
         </li>
         <li>
-          <a href="#" className=" py-2 px-3  rounded 0  md:p-0 hover:text-cyan-500">About</a>
+          <Link href="/about" className=" py-2 px-3  rounded 0  md:p-0 hover:text-cyan-500">About</Link>
         </li>
  
         <li>
-          <a href="#" className=" py-2 px-3  rounded md:p-0  hover:text-cyan-500">Contact</a>
+          <Link href='/contact' className=" py-2 px-3  rounded md:p-0  hover:text-cyan-500">Contact</Link>
         </li>
       </ul>
     </div>
